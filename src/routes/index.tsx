@@ -246,7 +246,10 @@ function Beneficiaries({ data, setData }: { data: Beneficiary[]; setData: (d: Be
     (b.name.toLowerCase().includes(q.toLowerCase()) || b.id.toLowerCase().includes(q.toLowerCase()))), [data, q, branch]);
 
   const save = () => {
-    if (!form.name || !form.dob || !form.branch || !form.program) return toast.error("Please fill all fields");
+    if (!form.name || !form.dob || !form.branch || !form.program) {
+      toast.error("Please fill all fields");
+      return;
+    }
     const age = Math.max(0, Math.floor((Date.now() - new Date(form.dob).getTime()) / 31557600000));
     setData([{ id: `BFWF-${1001 + data.length}`, name: form.name, age, branch: form.branch, program: form.program, status: "Active" }, ...data]);
     setForm({ name: "", dob: "", branch: "", program: "" });
