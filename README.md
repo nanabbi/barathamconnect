@@ -47,9 +47,7 @@ INTERACTIVITY & UX REQUIREMENTS:
 - Please output ALL the necessary React code in a single cohesive, working prototype. Do not leave placeholders for component logic; write out the full mock data arrays and render the complete UI so it works flawlessly in the preview window immediately.
 Yes, proceed — build the complete ERP portal with the sidebar shell, dashboard KPIs and chart, seeded data, and module views first.
 
-This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://barathamconnect.lovable.app
 
 ## Build with Lovable
 
